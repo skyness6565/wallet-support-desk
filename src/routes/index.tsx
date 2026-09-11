@@ -19,20 +19,21 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import walletHero from "@/assets/wallet-hero.png";
-import supportIllustration from "@/assets/support-illustration.png";
+import trustGuide from "@/assets/trust-wallet-guide.jpeg.asset.json";
+import trustShield from "@/assets/trust-wallet-shield.png.asset.json";
+import trustLogo from "@/assets/trust-community-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Crypto Wallet Help Center" },
+      { title: "Trust Wallet Help Center" },
       {
         name: "description",
         content:
           "Independent crypto wallet support center. Browse help topics, learn about wallet security, transactions, fees, and contact support safely.",
       },
-      { property: "og:title", content: "Crypto Wallet Help Center" },
+      { property: "og:title", content: "Trust Wallet Help Center" },
       {
         property: "og:description",
         content:
@@ -198,9 +199,11 @@ export default function Index() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="container-center flex h-16 items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2.5 font-bold text-foreground">
-            <span className="grid h-9 w-9 place-items-center rounded-xl gradient-primary text-primary-foreground shadow-sm">
-              <Wallet className="h-5 w-5" aria-hidden="true" />
-            </span>
+            <img
+              src={trustLogo.url}
+              alt="Trust Wallet Help Center logo"
+              className="h-9 w-auto"
+            />
             <span className="hidden text-lg sm:inline">Help Center</span>
           </Link>
 
@@ -239,10 +242,10 @@ export default function Index() {
                 Independent wallet support resources
               </div>
               <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Welcome to the <span className="text-gradient">Wallet Help Center</span>
+                Welcome to the <span className="text-gradient">Trust Wallet Help Center</span>
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                Find answers, explore support topics, and learn how to use your crypto wallet safely. This is an independent help page, not an official Trust Wallet site.
+                Find answers, explore support topics, and learn how to use your Trust Wallet safely. This is an independent help page, not the official Trust Wallet website.
               </p>
 
               <div className="mt-8">
@@ -288,10 +291,10 @@ export default function Index() {
             <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary/10 via-accent/10 to-transparent blur-2xl" aria-hidden="true" />
               <img
-                src={walletHero}
-                alt="Illustration of a secure cryptocurrency wallet app on a phone"
-                width={1536}
-                height={1024}
+                src={trustGuide.url}
+                alt="Trust Wallet guide illustration showing a phone with a secure wallet"
+                width={739}
+                height={415}
                 loading="eager"
                 className="relative z-10 w-full rounded-3xl object-cover shadow-soft"
               />
@@ -354,10 +357,10 @@ export default function Index() {
           <div className="container-center grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="order-2 lg:order-1">
               <img
-                src={supportIllustration}
-                alt="Friendly support agent helping a user through a chat conversation"
-                width={1536}
-                height={1024}
+                src={trustShield.url}
+                alt="Trust Wallet shield illustration showing how the wallet protects users"
+                width={588}
+                height={331}
                 loading="lazy"
                 className="w-full rounded-3xl object-cover shadow-soft"
               />
@@ -537,9 +540,11 @@ export default function Index() {
         <div className="container-center">
           <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
             <div className="flex items-center gap-2.5 font-bold text-foreground">
-              <span className="grid h-9 w-9 place-items-center rounded-xl gradient-primary text-primary-foreground shadow-sm">
-                <Wallet className="h-5 w-5" aria-hidden="true" />
-              </span>
+              <img
+                src={trustLogo.url}
+                alt="Trust Wallet Help Center logo"
+                className="h-9 w-auto"
+              />
               <span className="text-lg">Help Center</span>
             </div>
             <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -550,7 +555,7 @@ export default function Index() {
             </nav>
           </div>
           <div className="mt-8 flex flex-col gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-            <p>© {new Date().getFullYear()} Independent Crypto Wallet Help Center. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Trust Wallet Help Center. All rights reserved.</p>
             <p>This is an independent support page and is not affiliated with Trust Wallet or its parent company.</p>
           </div>
         </div>
