@@ -19,14 +19,15 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import walletHero from "@/assets/wallet-hero.png";
-import supportIllustration from "@/assets/support-illustration.png";
+import trustGuide from "@/assets/trust-wallet-guide.jpeg.asset.json";
+import trustShield from "@/assets/trust-wallet-shield.png.asset.json";
+import trustLogo from "@/assets/trust-community-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Crypto Wallet Help Center" },
+      { title: "Trust Wallet Help Center" },
       {
         name: "description",
         content:
