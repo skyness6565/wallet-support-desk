@@ -292,8 +292,8 @@ export default function Index() {
                 alt="Illustration of a secure cryptocurrency wallet app on a phone"
                 width={1536}
                 height={1024}
+                loading="eager"
                 className="relative z-10 w-full rounded-3xl object-cover shadow-soft"
-                priority="true"
               />
             </div>
           </div>
