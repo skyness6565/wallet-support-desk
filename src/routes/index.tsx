@@ -187,6 +187,17 @@ export default function Index() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openSupportChat = () => {
+    if (typeof window === "undefined") return;
+    const smartsupp = (window as any).smartsupp;
+    if (typeof smartsupp === "function") {
+      smartsupp("chat:show");
+      smartsupp("chat:open");
+    } else {
+      scrollToContact();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <a
@@ -222,7 +233,7 @@ export default function Index() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              onClick={scrollToContact}
+              onClick={openSupportChat}
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 focus-ring"
             >
               <LifeBuoy className="h-4 w-4" aria-hidden="true" />
@@ -275,7 +286,7 @@ export default function Index() {
                 </a>
                 <button
                   type="button"
-                  onClick={scrollToContact}
+                  onClick={openSupportChat}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition hover:bg-muted focus-ring"
                 >
                   <MessageCircle className="h-4 w-4" aria-hidden="true" />
@@ -388,7 +399,7 @@ export default function Index() {
               </ul>
               <button
                 type="button"
-                onClick={scrollToContact}
+                onClick={openSupportChat}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition hover:opacity-90 focus-ring"
               >
                 Get in touch
@@ -549,7 +560,13 @@ export default function Index() {
             </div>
             <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <a href="#categories" className="transition hover:text-foreground">Help Center</a>
-              <a href="#contact" className="transition hover:text-foreground">Support</a>
+              <button
+                type="button"
+                onClick={openSupportChat}
+                className="transition hover:text-foreground"
+              >
+                Support
+              </button>
               <a href="#" className="transition hover:text-foreground">Privacy</a>
               <a href="#" className="transition hover:text-foreground">Terms</a>
             </nav>
