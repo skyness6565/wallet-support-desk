@@ -560,7 +560,13 @@ export default function Index() {
             </div>
             <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <a href="#categories" className="transition hover:text-foreground">Help Center</a>
-              <a href="#contact" className="transition hover:text-foreground">Support</a>
+              <button
+                type="button"
+                onClick={openSupportChat}
+                className="transition hover:text-foreground"
+              >
+                Support
+              </button>
               <a href="#" className="transition hover:text-foreground">Privacy</a>
               <a href="#" className="transition hover:text-foreground">Terms</a>
             </nav>
