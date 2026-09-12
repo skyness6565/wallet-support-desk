@@ -115,6 +115,36 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        {/* Smartsupp Live Chat script */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _smartsupp = _smartsupp || {};
+              _smartsupp.key = '8640798599b253193913386107149e87c884877d';
+              window.smartsupp || (function(d) {
+                var s, c, o = smartsupp = function() { o._.push(arguments); }; o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = 'https://www.smartsuppchat.com/loader.js?';
+                s.parentNode.insertBefore(c, s);
+              })(document);
+            `,
+          }}
+        />
+        <noscript>
+          Powered by{" "}
+          <a
+            href="https://www.smartsupp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Smartsupp
+          </a>
+        </noscript>
       </body>
     </html>
   );
