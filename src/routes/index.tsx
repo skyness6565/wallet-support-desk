@@ -399,7 +399,7 @@ export default function Index() {
               </ul>
               <button
                 type="button"
-                onClick={scrollToContact}
+                onClick={openSupportChat}
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition hover:opacity-90 focus-ring"
               >
                 Get in touch
