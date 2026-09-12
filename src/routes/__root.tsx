@@ -132,6 +132,8 @@ function RootShell({ children }: { children: ReactNode }) {
                 c.src = 'https://www.smartsuppchat.com/loader.js?';
                 s.parentNode.insertBefore(c, s);
               })(document);
+              smartsupp('chat:show');
+              smartsupp('chat:open');
             `,
           }}
         />

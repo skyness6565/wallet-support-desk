@@ -187,6 +187,17 @@ export default function Index() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openSupportChat = () => {
+    if (typeof window === "undefined") return;
+    const smartsupp = (window as any).smartsupp;
+    if (typeof smartsupp === "function") {
+      smartsupp("chat:show");
+      smartsupp("chat:open");
+    } else {
+      scrollToContact();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <a
