@@ -286,7 +286,7 @@ export default function Index() {
                 </a>
                 <button
                   type="button"
-                  onClick={scrollToContact}
+                  onClick={openSupportChat}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition hover:bg-muted focus-ring"
                 >
                   <MessageCircle className="h-4 w-4" aria-hidden="true" />
