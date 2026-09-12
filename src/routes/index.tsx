@@ -233,7 +233,7 @@ export default function Index() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              onClick={scrollToContact}
+              onClick={openSupportChat}
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 focus-ring"
             >
               <LifeBuoy className="h-4 w-4" aria-hidden="true" />
